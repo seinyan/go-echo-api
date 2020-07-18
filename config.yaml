@@ -1,0 +1,28 @@
+prod: &default
+  name: satellity_prod
+  http:
+    host: 0.0.0.0
+    port: 9000
+  database:
+    user: postgres
+    password: 8888
+    host: 127.0.0.1
+    port: 5432
+    dbname: robot_auto_db
+  asterisk:
+    id: 1
+    sip: PJSIP
+    host:    212.109.194.23
+    amiport: 5038
+    amiuser: asterisk
+    amipass: asterisk
+    ariport: 8088
+    ariuser: asterisk
+    aripass: asterisk
+    ariapp:  boot
+    context: speaks_boot
+
+dev:
+  <<: *default
+  database:
+    name: satellity_dev
